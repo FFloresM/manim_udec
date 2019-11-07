@@ -2,7 +2,6 @@ from manimlib.imports import *
 
 class Suma(Scene):
 	def construct(self):
-		O  = np.array([0,0,0])
 		v1 = np.array([3,0,0])
 		v2 = np.array([2,3,0])
 		v3 = v1+v2
