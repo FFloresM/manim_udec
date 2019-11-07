@@ -1,5 +1,0 @@
-file '/home/francisco/manim_udec/media/videos/vectores-suma/1440p60/partial_movie_files/Suma_text/00000.mp4'
-file '/home/francisco/manim_udec/media/videos/vectores-suma/1440p60/partial_movie_files/Suma_text/00001.mp4'
-file '/home/francisco/manim_udec/media/videos/vectores-suma/1440p60/partial_movie_files/Suma_text/00002.mp4'
-file '/home/francisco/manim_udec/media/videos/vectores-suma/1440p60/partial_movie_files/Suma_text/00003.mp4'
-file '/home/francisco/manim_udec/media/videos/vectores-suma/1440p60/partial_movie_files/Suma_text/00004.mp4'
