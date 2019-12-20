@@ -18,7 +18,7 @@ class Suma(Scene):
 		vector2 = Vector(v2,color="green")
 		vector3 = Vector(v3)
 		vector1f = Vector(v1,color="red").shift(v2)
-		self.move_camera(0.5*LEFT)
+	#	self.move_camera(0.5*LEFT)
 		self.play(ShowCreation(labelinicialv1))
 		self.play(ShowCreation(vector1))
 		self.play(ShowCreation(labelinicialv2))

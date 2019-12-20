@@ -2,7 +2,7 @@ from manimlib.imports import *
 
 class Suma(Scene):
 	CONFIG = {
-        "camera_config": {"frame_center": 2*UP+3*RIGHT}
+        "camera_config": {"frame_center": 2*UP+2*RIGHT}
 	}
 	def construct(self):
 		O  = np.array([0,0,0])
