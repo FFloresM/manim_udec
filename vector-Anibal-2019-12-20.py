@@ -83,6 +83,7 @@ class S(Scene):  # Nuevo
 		suma1i =  VGroup(vec1i,lv1i,vec2i,lv2,vec3,lv3)
 		#VGroup(vec1i,vec1f,vec1i2,vec2i,vec2f,vec2i2,vec3, lv1i, lv2, lv1f, lv3)
 		suma1i.scale(0.5)
+	#	self.play(Transform(suma1i,suma1i_2))
 		self.play(ApplyMethod(suma1i.to_edge, LEFT - 3.5*UP, {"buff": 1.6}))
 		self.wait()
 		self.play(ShowCreation(vec1i2),ShowCreation(vec2i2))

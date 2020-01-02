@@ -1,20 +1,35 @@
 from manimlib.imports import *
 
 class Suma(Scene):
+	CONFIG = {
+		"camera_config": {"frame_center": 4*RIGHT}
+	}
 	def construct(self):
-		v1 = np.array([3,0,0])
-		v2 = np.array([2,3,0])
-		v3 = v1+v2
+		color = "white"
+		v1 = np.array([1,0,0])
+		v1_tex = TexMobject("\\vec{A}", color=color).shift(0.5*v1-0.5*DOWN)
 
-		vector1 = Vector(v1)
-		vector2 = Vector(v2)
-		vector3 = Vector(v3)
-		vector1f = Vector(v1).shift(v2)
-		self.play(ShowCreation(vector1))
-		self.play(ShowCreation(vector2))
-		self.play(ShowCreation(vector3))
-		self.play(Transform(vector1, vector1f))
-		self.wait()
+
+		A = Vector(v1).shift(2*UP)
+		vect1 = Vector(v1, color=color)
+
+		v2 = v1*3
+		A3 = Vector(v2).shift(2*DOWN)
+		A3_tex = TexMobject("3\\vec{A}", color=color).shift(0.5*v2+1.5*DOWN)
+
+		ec = TexMobject("\\vec{A}+\\vec{A}+\\vec{A} = 3\\vec{A}").shift(7*RIGHT)
+
+
+		self.play(ShowCreation(A), ShowCreation(TexMobject("\\vec{A}").shift(0.5*v1+2.5*UP)))
+	#	cvect1 = DashedVMobject(vect1)	#linea punteada
+		self.play(Transform(Vector(v1).shift(2*UP),vect1))
+		self.play(ShowCreation(v1_tex))
+		self.play(ShowCreation(Vector(v1, color=color).shift(v1)), ShowCreation(TexMobject("\\vec{A}", color=color).shift(1.5*v1-0.5*DOWN)))
+		self.play(ShowCreation(Vector(v1, color=color).shift([2,0,0])), ShowCreation(TexMobject("\\vec{A}", color=color).shift(2.5*v1-0.5*DOWN)))
+		
+		self.play(ShowCreation(A3), ShowCreation(A3_tex))
+		self.play(ShowCreation(ec))
+		self.wait(4)
 
 
 class Suma_text(Scene):
