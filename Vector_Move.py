@@ -25,7 +25,9 @@ class VectorMove(Scene):
         #self.play(ShowCreation(v2txt))
         
 class Vector3(Scene):
-    def construct(self):
+def construct(self):
+        PATH = os.getcwd()
+        ruler = PATH+'/logo/ruler.svg'
         v1 = np.array([3,0,0])
         v2 = np.array([-3,0,0])
         v3 = v1+v2
@@ -39,20 +41,19 @@ class Vector3(Scene):
         v2txt = TextMobject("-A")
         v1txt.shift(UR)
         v2txt.shift(UL)
+
+        img = SVGMobject(ruler)
+        img.scale(1)
+        img.set_width(6)
+        img.rotate(45 * DEGREES)
+        img.shift(DOWN)
+        self.play(ShowCreation(img))
         #self.play(ShowCreation(v1txt))
         self.play(ShowCreation(vector1),Write(v1txt))
         self.wait()
         self.play(Transform(vector1,vector2),Transform(v1txt,v2txt))
-        #self.play(Transform(v1txt,v2txt))
-        #self.play(ShowCreation(vector3),Write(v3txt))
-        
-
-        #vgroup_ = VGroup(vector1,v1txt,vector2,v2txt,vector3,v3txt)
-        #self.play(ApplyMethod(vgroup_.to_edge, LEFT, {"buff": 1.6}))
-        #self.play(ShowCreation(v1txt))
-
-        #self.play(ShowCreation(vector2))
-        #self.play(ShowCreation(v2txt))
+        self.wait()
+ 
 class View3D(ThreeDScene):
    
     def construct(self):
